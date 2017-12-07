@@ -1,7 +1,3 @@
-var util = require('util');
-
-require('colors');
-
 var _ = require('lodash');
 var yahooFinance = require('../..');
 
@@ -34,6 +30,6 @@ yahooFinance.snapshot({
   fields: FIELDS,
   symbol: SYMBOL
 }).then(function (snapshot) {
-  console.log(util.format('=== %s ===', SYMBOL).cyan);
+  console.log(`=== ${symbol} ===`);
   console.log(JSON.stringify(snapshot, null, 2));
 });

@@ -1,7 +1,3 @@
-var util = require('util');
-
-require('colors');
-
 var _ = require('lodash');
 var yahooFinance = require('../..');
 
@@ -20,11 +16,7 @@ yahooFinance.historical({
 }, function (err, result) {
   if (err) { throw err; }
   _.each(result, function (quotes, symbol) {
-    console.log(util.format(
-      '=== %s (%d) ===',
-      symbol,
-      quotes.length
-    ).cyan);
+    console.log(`=== ${symbol} (${quotes.length}) ==='`);
     if (quotes[0]) {
       console.log(
         '%s\n...\n%s',

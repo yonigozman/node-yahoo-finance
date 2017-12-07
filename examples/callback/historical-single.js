@@ -1,7 +1,3 @@
-var util = require('util');
-
-require('colors');
-
 var yahooFinance = require('../..');
 
 var SYMBOL = 'AAPL';
@@ -13,11 +9,7 @@ yahooFinance.historical({
   period: 'd'
 }, function (err, quotes) {
   if (err) { throw err; }
-  console.log(util.format(
-    '=== %s (%d) ===',
-    SYMBOL,
-    quotes.length
-  ).cyan);
+  console.log(`=== ${symbol} (${quotes.length}) ===`);
   if (quotes[0]) {
     console.log(
       '%s\n...\n%s',
