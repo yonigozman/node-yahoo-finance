@@ -33,7 +33,7 @@
     "moment-timezone": "^0.5.10",
     "request-promise-native": "^1.0.5",
     "string": "^3.3.3",
-    "tough-cookie": "^2.3.2",
+    "tough-cookie-no-native": "^2.4.0",
     "url": "^0.11.0"
   },
   "devDependencies": {
